@@ -1,0 +1,5 @@
+3e8cd73c68b8a8b0b03e872febdb92c5
+var parent = require("../../es/object/assign");
+
+module.exports = parent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFzc2lnbi5qcyJdLCJuYW1lcyI6WyJwYXJlbnQiLCJyZXF1aXJlIiwibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsTUFBTSxHQUFHQyxPQUFPLDBCQUFwQjs7QUFFQUMsTUFBTSxDQUFDQyxPQUFQLEdBQWlCSCxNQUFqQiIsInNvdXJjZXNDb250ZW50IjpbInZhciBwYXJlbnQgPSByZXF1aXJlKCcuLi8uLi9lcy9vYmplY3QvYXNzaWduJyk7XG5cbm1vZHVsZS5leHBvcnRzID0gcGFyZW50O1xuIl19

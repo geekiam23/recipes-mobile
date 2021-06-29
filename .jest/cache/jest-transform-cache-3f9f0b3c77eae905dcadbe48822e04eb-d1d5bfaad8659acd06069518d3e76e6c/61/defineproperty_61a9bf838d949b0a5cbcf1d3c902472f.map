@@ -1,0 +1,1 @@
+{"version":3,"sources":["define-property.js"],"names":["parent","require","module","exports"],"mappings":"AAAA,IAAIA,MAAM,GAAGC,OAAO,mCAApB;;AAEAC,MAAM,CAACC,OAAP,GAAiBH,MAAjB","sourcesContent":["var parent = require('../../es/object/define-property');\n\nmodule.exports = parent;\n"]}

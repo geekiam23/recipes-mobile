@@ -1,0 +1,81 @@
+3fb47f9b5f6c8760845153629749bd34
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = useCurrentRender;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _CurrentRenderContext = _interopRequireDefault(require("./CurrentRenderContext"));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function _getRequireWildcardCache() {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
+    return {
+      default: obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj.default = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+function useCurrentRender(_ref) {
+  var state = _ref.state,
+      navigation = _ref.navigation,
+      descriptors = _ref.descriptors;
+  var current = React.useContext(_CurrentRenderContext.default);
+
+  if (current && navigation.isFocused()) {
+    current.options = descriptors[state.routes[state.index].key].options;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVzZUN1cnJlbnRSZW5kZXIudHN4Il0sIm5hbWVzIjpbImRlc2NyaXB0b3JzIiwiY3VycmVudCIsIlJlYWN0IiwiQ3VycmVudFJlbmRlckNvbnRleHQiLCJuYXZpZ2F0aW9uIiwic3RhdGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQSxJQUFBLEtBQUEsR0FBQSx1QkFBQSxDQUFBLE9BQUEsQ0FBQSxPQUFBLENBQUEsQ0FBQTs7QUFFQSxJQUFBLHFCQUFBLEdBQUEsc0JBQUEsQ0FBQSxPQUFBLDBCQUFBLENBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQWVlLFNBQUEsZ0JBQUEsT0FJSDtBQUFBLE1BSjZCLEtBSTdCLFFBSjZCLEtBSTdCO0FBQUEsTUFKNkIsVUFJN0IsUUFKNkIsVUFJN0I7QUFBQSxNQURWQSxXQUNVLFFBRFZBLFdBQ1U7QUFDVixNQUFNQyxPQUFPLEdBQUdDLEtBQUssQ0FBTEEsVUFBQUEsQ0FBaUJDLHFCQUFBQSxDQUFqQyxPQUFnQkQsQ0FBaEI7O0FBRUEsTUFBSUQsT0FBTyxJQUFJRyxVQUFVLENBQXpCLFNBQWVBLEVBQWYsRUFBdUM7QUFDckNILElBQUFBLE9BQU8sQ0FBUEEsT0FBQUEsR0FBa0JELFdBQVcsQ0FBQ0ssS0FBSyxDQUFMQSxNQUFBQSxDQUFhQSxLQUFLLENBQWxCQSxLQUFBQSxFQUFaTCxHQUFXLENBQVhBLENBQWxCQyxPQUFBQTtBQUNEO0FBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgdHlwZSB7IE5hdmlnYXRpb25TdGF0ZSwgUGFyYW1MaXN0QmFzZSB9IGZyb20gJ0ByZWFjdC1uYXZpZ2F0aW9uL3JvdXRlcnMnO1xuaW1wb3J0IEN1cnJlbnRSZW5kZXJDb250ZXh0IGZyb20gJy4vQ3VycmVudFJlbmRlckNvbnRleHQnO1xuaW1wb3J0IHR5cGUgeyBEZXNjcmlwdG9yLCBOYXZpZ2F0aW9uSGVscGVycyB9IGZyb20gJy4vdHlwZXMnO1xuXG50eXBlIE9wdGlvbnMgPSB7XG4gIHN0YXRlOiBOYXZpZ2F0aW9uU3RhdGU7XG4gIG5hdmlnYXRpb246IE5hdmlnYXRpb25IZWxwZXJzPFBhcmFtTGlzdEJhc2U+O1xuICBkZXNjcmlwdG9yczoge1xuICAgIFtrZXk6IHN0cmluZ106IERlc2NyaXB0b3I8UGFyYW1MaXN0QmFzZSwgc3RyaW5nLCBOYXZpZ2F0aW9uU3RhdGUsIG9iamVjdD47XG4gIH07XG59O1xuXG4vKipcbiAqIFdyaXRlIHRoZSBjdXJyZW50IG9wdGlvbnMsIHNvIHRoYXQgc2VydmVyIHJlbmRlcmVyIGNhbiBnZXQgY3VycmVudCB2YWx1ZXNcbiAqIE11dGF0aW5nIHZhbHVlcyBsaWtlIHRoaXMgaXMgbm90IHNhZmUgaW4gYXN5bmMgbW9kZSwgYnV0IGl0IGRvZXNuJ3QgYXBwbHkgdG8gU1NSXG4gKi9cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIHVzZUN1cnJlbnRSZW5kZXIoe1xuICBzdGF0ZSxcbiAgbmF2aWdhdGlvbixcbiAgZGVzY3JpcHRvcnMsXG59OiBPcHRpb25zKSB7XG4gIGNvbnN0IGN1cnJlbnQgPSBSZWFjdC51c2VDb250ZXh0KEN1cnJlbnRSZW5kZXJDb250ZXh0KTtcblxuICBpZiAoY3VycmVudCAmJiBuYXZpZ2F0aW9uLmlzRm9jdXNlZCgpKSB7XG4gICAgY3VycmVudC5vcHRpb25zID0gZGVzY3JpcHRvcnNbc3RhdGUucm91dGVzW3N0YXRlLmluZGV4XS5rZXldLm9wdGlvbnM7XG4gIH1cbn1cbiJdfQ==

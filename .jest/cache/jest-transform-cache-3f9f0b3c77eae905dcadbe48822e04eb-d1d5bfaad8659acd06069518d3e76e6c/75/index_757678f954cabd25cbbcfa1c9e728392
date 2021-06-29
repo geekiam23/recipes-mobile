@@ -1,0 +1,5 @@
+ccdeacf87257f4db119740bd08f20560
+var parent = require("../../es/set");
+
+module.exports = parent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInBhcmVudCIsInJlcXVpcmUiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUdDLE9BQU8sZ0JBQXBCOztBQUVBQyxNQUFNLENBQUNDLE9BQVAsR0FBaUJILE1BQWpCIiwic291cmNlc0NvbnRlbnQiOlsidmFyIHBhcmVudCA9IHJlcXVpcmUoJy4uLy4uL2VzL3NldCcpO1xuXG5tb2R1bGUuZXhwb3J0cyA9IHBhcmVudDtcbiJdfQ==

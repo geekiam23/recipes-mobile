@@ -1,0 +1,1 @@
+{"version":3,"sources":["esnext.symbol.replace-all.js"],"names":["defineWellKnownSymbol","require"],"mappings":"AACA,IAAIA,qBAAqB,GAAGC,OAAO,yCAAnC;;AAEAD,qBAAqB,CAAC,YAAD,CAArB","sourcesContent":["// TODO: remove from `core-js@4`\nvar defineWellKnownSymbol = require('../internals/define-well-known-symbol');\n\ndefineWellKnownSymbol('replaceAll');\n"]}

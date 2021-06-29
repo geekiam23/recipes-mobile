@@ -1,0 +1,7 @@
+41e264a41aef6040a7cfa30179395c4e
+require("../../../modules/es.array.iterator");
+
+var entryVirtual = require("../../../internals/entry-virtual");
+
+module.exports = entryVirtual('Array').entries;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVudHJpZXMuanMiXSwibmFtZXMiOlsicmVxdWlyZSIsImVudHJ5VmlydHVhbCIsIm1vZHVsZSIsImV4cG9ydHMiLCJlbnRyaWVzIl0sIm1hcHBpbmdzIjoiQUFBQUEsT0FBTyxzQ0FBUDs7QUFDQSxJQUFJQyxZQUFZLEdBQUdELE9BQU8sb0NBQTFCOztBQUVBRSxNQUFNLENBQUNDLE9BQVAsR0FBaUJGLFlBQVksQ0FBQyxPQUFELENBQVosQ0FBc0JHLE9BQXZDIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi4vLi4vLi4vbW9kdWxlcy9lcy5hcnJheS5pdGVyYXRvcicpO1xudmFyIGVudHJ5VmlydHVhbCA9IHJlcXVpcmUoJy4uLy4uLy4uL2ludGVybmFscy9lbnRyeS12aXJ0dWFsJyk7XG5cbm1vZHVsZS5leHBvcnRzID0gZW50cnlWaXJ0dWFsKCdBcnJheScpLmVudHJpZXM7XG4iXX0=
