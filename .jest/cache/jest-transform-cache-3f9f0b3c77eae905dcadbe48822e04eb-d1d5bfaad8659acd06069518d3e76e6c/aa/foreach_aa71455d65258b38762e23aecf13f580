@@ -1,0 +1,5 @@
+498abb914f3abd090b88937588702e89
+var parent = require("../../../es/array/virtual/for-each");
+
+module.exports = parent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvci1lYWNoLmpzIl0sIm5hbWVzIjpbInBhcmVudCIsInJlcXVpcmUiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUdDLE9BQU8sc0NBQXBCOztBQUVBQyxNQUFNLENBQUNDLE9BQVAsR0FBaUJILE1BQWpCIiwic291cmNlc0NvbnRlbnQiOlsidmFyIHBhcmVudCA9IHJlcXVpcmUoJy4uLy4uLy4uL2VzL2FycmF5L3ZpcnR1YWwvZm9yLWVhY2gnKTtcblxubW9kdWxlLmV4cG9ydHMgPSBwYXJlbnQ7XG4iXX0=

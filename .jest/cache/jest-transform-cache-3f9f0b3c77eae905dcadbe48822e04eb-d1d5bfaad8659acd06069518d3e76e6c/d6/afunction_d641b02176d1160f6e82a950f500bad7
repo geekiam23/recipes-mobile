@@ -1,0 +1,9 @@
+6ffc7ce863bad5795ac45b424e73f678
+module.exports = function (it) {
+  if (typeof it != 'function') {
+    throw TypeError(String(it) + ' is not a function');
+  }
+
+  return it;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImEtZnVuY3Rpb24uanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsIml0IiwiVHlwZUVycm9yIiwiU3RyaW5nIl0sIm1hcHBpbmdzIjoiQUFBQUEsTUFBTSxDQUFDQyxPQUFQLEdBQWlCLFVBQVVDLEVBQVYsRUFBYztBQUM3QixNQUFJLE9BQU9BLEVBQVAsSUFBYSxVQUFqQixFQUE2QjtBQUMzQixVQUFNQyxTQUFTLENBQUNDLE1BQU0sQ0FBQ0YsRUFBRCxDQUFOLEdBQWEsb0JBQWQsQ0FBZjtBQUNEOztBQUFDLFNBQU9BLEVBQVA7QUFDSCxDQUpEIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbiAoaXQpIHtcbiAgaWYgKHR5cGVvZiBpdCAhPSAnZnVuY3Rpb24nKSB7XG4gICAgdGhyb3cgVHlwZUVycm9yKFN0cmluZyhpdCkgKyAnIGlzIG5vdCBhIGZ1bmN0aW9uJyk7XG4gIH0gcmV0dXJuIGl0O1xufTtcbiJdfQ==

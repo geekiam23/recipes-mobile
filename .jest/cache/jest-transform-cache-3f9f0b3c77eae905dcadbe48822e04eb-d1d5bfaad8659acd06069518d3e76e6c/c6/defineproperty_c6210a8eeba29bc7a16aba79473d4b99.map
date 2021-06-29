@@ -1,0 +1,1 @@
+{"version":3,"sources":["define-property.js"],"names":["module","exports","require"],"mappings":"AAAAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,8CAAD,CAAxB","sourcesContent":["module.exports = require(\"core-js-pure/features/object/define-property\");"]}

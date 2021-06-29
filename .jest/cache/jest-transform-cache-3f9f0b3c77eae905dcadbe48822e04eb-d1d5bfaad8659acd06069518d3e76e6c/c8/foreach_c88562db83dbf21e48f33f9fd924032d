@@ -1,0 +1,7 @@
+aa101d59f2f73f54af39c53553e3af1c
+require("../../../modules/es.array.for-each");
+
+var entryVirtual = require("../../../internals/entry-virtual");
+
+module.exports = entryVirtual('Array').forEach;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvci1lYWNoLmpzIl0sIm5hbWVzIjpbInJlcXVpcmUiLCJlbnRyeVZpcnR1YWwiLCJtb2R1bGUiLCJleHBvcnRzIiwiZm9yRWFjaCJdLCJtYXBwaW5ncyI6IkFBQUFBLE9BQU8sc0NBQVA7O0FBQ0EsSUFBSUMsWUFBWSxHQUFHRCxPQUFPLG9DQUExQjs7QUFFQUUsTUFBTSxDQUFDQyxPQUFQLEdBQWlCRixZQUFZLENBQUMsT0FBRCxDQUFaLENBQXNCRyxPQUF2QyIsInNvdXJjZXNDb250ZW50IjpbInJlcXVpcmUoJy4uLy4uLy4uL21vZHVsZXMvZXMuYXJyYXkuZm9yLWVhY2gnKTtcbnZhciBlbnRyeVZpcnR1YWwgPSByZXF1aXJlKCcuLi8uLi8uLi9pbnRlcm5hbHMvZW50cnktdmlydHVhbCcpO1xuXG5tb2R1bGUuZXhwb3J0cyA9IGVudHJ5VmlydHVhbCgnQXJyYXknKS5mb3JFYWNoO1xuIl19

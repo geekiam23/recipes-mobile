@@ -1,0 +1,1 @@
+{"version":3,"sources":["html.js"],"names":["getBuiltIn","require","module","exports"],"mappings":"AAAA,IAAIA,UAAU,GAAGC,OAAO,6BAAxB;;AAEAC,MAAM,CAACC,OAAP,GAAiBH,UAAU,CAAC,UAAD,EAAa,iBAAb,CAA3B","sourcesContent":["var getBuiltIn = require('../internals/get-built-in');\n\nmodule.exports = getBuiltIn('document', 'documentElement');\n"]}

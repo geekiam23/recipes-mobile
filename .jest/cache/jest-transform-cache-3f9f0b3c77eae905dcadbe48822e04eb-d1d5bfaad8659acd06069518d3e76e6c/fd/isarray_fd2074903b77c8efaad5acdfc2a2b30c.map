@@ -1,0 +1,1 @@
+{"version":3,"sources":["is-array.js"],"names":["parent","require","module","exports"],"mappings":"AAAA,IAAIA,MAAM,GAAGC,OAAO,2BAApB;;AAEAC,MAAM,CAACC,OAAP,GAAiBH,MAAjB","sourcesContent":["var parent = require('../../es/array/is-array');\n\nmodule.exports = parent;\n"]}

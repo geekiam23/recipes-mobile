@@ -1,0 +1,5 @@
+b69f5bc1c7fc434c716fbc399df8138b
+var parent = require("../../es/array/is-array");
+
+module.exports = parent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImlzLWFycmF5LmpzIl0sIm5hbWVzIjpbInBhcmVudCIsInJlcXVpcmUiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUdDLE9BQU8sMkJBQXBCOztBQUVBQyxNQUFNLENBQUNDLE9BQVAsR0FBaUJILE1BQWpCIiwic291cmNlc0NvbnRlbnQiOlsidmFyIHBhcmVudCA9IHJlcXVpcmUoJy4uLy4uL2VzL2FycmF5L2lzLWFycmF5Jyk7XG5cbm1vZHVsZS5leHBvcnRzID0gcGFyZW50O1xuIl19

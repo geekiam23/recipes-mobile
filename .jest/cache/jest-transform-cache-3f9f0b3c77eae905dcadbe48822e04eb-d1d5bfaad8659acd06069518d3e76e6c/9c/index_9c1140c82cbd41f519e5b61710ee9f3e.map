@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAAA;;AAEA","sourcesContent":["export {default as LoginScreen} from './LoginScreen';\n\nexport {default as RegistrationScreen} from './RegistrationScreen';\n"]}
