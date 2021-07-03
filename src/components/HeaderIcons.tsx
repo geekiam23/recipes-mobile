@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 
+import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
 import Heart from '../assets/Heart';
 import Profile from '../assets/Profile';
 
 const HeaderIcons = () => {
+  const {signOut} = useContext(AuthContext);
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.heartContainer}>
+      <TouchableOpacity style={styles.heartContainer} onPress={signOut}>
         <Heart />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={signOut}>
         <Profile />
       </TouchableOpacity>
     </View>
