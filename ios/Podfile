@@ -12,6 +12,8 @@ target 'recipesMobile' do
     :hermes_enabled => false
   )
 
+  pod 'Firebase/Analytics'
+
   target 'recipesMobileTests' do
     inherit! :complete
     # Pods for testing
