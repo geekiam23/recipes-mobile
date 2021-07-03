@@ -2,6 +2,10 @@ module.exports = {
   preset: 'react-native',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    '@react-native-firebase/auth':
+      '<rootDir>/src/lib/testing/mocks/firebase/auth.js',
+    '@react-native-firebase/firestore':
+      '<rootDir>/src/lib/testing/mocks/firebase/firestore.js',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
@@ -12,9 +16,13 @@ module.exports = {
     'ts-jest': {
       isolatedModules: true,
     },
+    window: {},
   },
+  testEnvironment: 'jsdom',
   clearMocks: true,
-  setupFiles: ['./node_modules/react-native-gesture-handler/jestSetup.js'],
-  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-native/extend-expect',
+    '<rootDir>/jest.setup.ts',
+  ],
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/node_modules/**'],
 };
