@@ -1,5 +1,4 @@
-import React, {FC, useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React, {FC, useContext, useState} from 'react';
 import {
   View,
   StatusBar,
@@ -9,14 +8,30 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
+import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
+import {RootStackParamList} from '../types';
 import image from '../assets/login_bg.jpg';
 
-const Login: FC = () => {
-  const navigation = useNavigation();
+type LoginScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Login'
+>;
 
+type Props = {
+  navigation: LoginScreenNavigationProp;
+};
+
+const Login: FC<Props> = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // eslint-disable-next-line prettier/prettier
+  const {signIn} = useContext(AuthContext);
+
+  const onLoginPress = () => {
+    signIn(email, password);
+  };
 
   const onFooterLinkPress = () => {
     navigation.navigate('Registration');
@@ -27,10 +42,11 @@ const Login: FC = () => {
       <StatusBar barStyle="dark-content" />
       <ImageBackground source={image} style={styles.image} />
       <View style={styles.bodyContainer}>
-        <Text style={styles.header}>Welcome to Splash</Text>
+        <Text style={styles.header}>Welcome back</Text>
         <View style={styles.inputView}>
           <TextInput
             style={styles.textInput}
+            testID="login-email-input"
             placeholder="Email"
             placeholderTextColor="#000"
             onChangeText={text => setEmail(text)}
@@ -41,6 +57,7 @@ const Login: FC = () => {
         <View style={styles.inputView}>
           <TextInput
             style={styles.textInput}
+            testID="login-password-input"
             placeholder="Password"
             placeholderTextColor="#000"
             secureTextEntry={true}
@@ -50,7 +67,9 @@ const Login: FC = () => {
         </View>
 
         <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText}>Sign In</Text>
+          <Text style={styles.loginText} onPress={onLoginPress}>
+            Sign In
+          </Text>
         </TouchableOpacity>
         <View style={styles.footer_text_container}>
           <Text style={styles.footer_text}>Don't have an account?</Text>

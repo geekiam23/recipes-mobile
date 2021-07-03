@@ -1,5 +1,4 @@
-import React, {FC, useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React, {FC, useContext, useState} from 'react';
 import {
   View,
   StatusBar,
@@ -9,12 +8,23 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-import image from '../assets/login_bg.jpeg';
+import {RootStackParamList} from '../types';
+import image from '../assets/login_bg.jpg';
+import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
 
-const Registration: FC = () => {
-  const navigation = useNavigation();
+type RegistrationScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Registration'
+>;
 
+type Props = {
+  navigation: RegistrationScreenNavigationProp;
+};
+
+const Registration: FC<Props> = ({navigation}) => {
+  const {registerAccount} = useContext(AuthContext);
   const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,17 +35,20 @@ const Registration: FC = () => {
       alert("Passwords don't match.");
       return;
     }
+
+    registerAccount(displayName, email, password);
   };
 
   const onFooterLinkPress = () => {
     navigation.navigate('Login');
   };
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
       <ImageBackground source={image} style={styles.image} />
       <View style={styles.bodyContainer}>
-        <Text style={styles.header}>Welcome Back, Will</Text>
+        <Text style={styles.header}>Welcome to Recipes</Text>
         <View style={styles.inputView}>
           <TextInput
             style={styles.textInput}
@@ -45,7 +58,6 @@ const Registration: FC = () => {
             value={displayName}
           />
         </View>
-
         <View style={styles.inputView}>
           <TextInput
             style={styles.textInput}
@@ -55,7 +67,6 @@ const Registration: FC = () => {
             value={email}
           />
         </View>
-
         <View style={styles.inputView}>
           <TextInput
             style={styles.textInput}
@@ -66,7 +77,6 @@ const Registration: FC = () => {
             value={password}
           />
         </View>
-
         <View style={styles.inputView}>
           <TextInput
             style={styles.textInput}
@@ -77,7 +87,6 @@ const Registration: FC = () => {
             value={confirmPassword}
           />
         </View>
-
         <TouchableOpacity
           style={styles.registrationBtn}
           onPress={onRegisterPress}>
@@ -99,13 +108,11 @@ const styles = StyleSheet.create({
     flex: 1,
     display: 'flex',
   },
-
   image: {
     width: '100%',
     opacity: 0.3,
     flex: 1,
   },
-
   header: {
     fontFamily: 'Helvetica Neue',
     fontWeight: 'bold',
@@ -114,7 +121,6 @@ const styles = StyleSheet.create({
     color: '#000',
     paddingBottom: 100,
   },
-
   bodyContainer: {
     flex: 1,
     position: 'absolute',
@@ -122,7 +128,6 @@ const styles = StyleSheet.create({
     marginTop: 200,
     alignItems: 'center',
   },
-
   inputView: {
     color: '#000',
     borderBottomColor: '#000',
@@ -131,7 +136,6 @@ const styles = StyleSheet.create({
     height: 45,
     marginBottom: 20,
   },
-
   textInput: {
     height: 50,
     flex: 1,
@@ -140,12 +144,10 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     color: '#000',
   },
-
   footer_text_container: {
     marginTop: 70,
     flexDirection: 'row',
   },
-
   footer_btn: {
     fontWeight: 'bold',
     color: '#000',
@@ -153,12 +155,10 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     textDecorationLine: 'underline',
   },
-
   footer_text: {
     height: 30,
     color: '#000',
   },
-
   registrationText: {
     fontWeight: 'bold',
     fontSize: 22,
@@ -166,7 +166,6 @@ const styles = StyleSheet.create({
     color: '#FFF',
     textAlign: 'center',
   },
-
   registrationBtn: {
     width: '60%',
     borderRadius: 8,
