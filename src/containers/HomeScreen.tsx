@@ -5,24 +5,6 @@ import Config from 'react-native-config';
 
 import VerticalImageIndex from '../components/VerticalImageIndex';
 
-import {StackNavigationProp} from '@react-navigation/stack';
-
-import {RootStackParamList} from '../types';
-import {Recipe} from '../types/recipe';
-
-type LoginScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'Home'
->;
-
-type Props = {
-  navigation: LoginScreenNavigationProp;
-};
-
-type Item = {
-  item: Recipe;
-};
-
 const HomeScreen = () => {
   const [photos, setPhotos] = useState([]);
 

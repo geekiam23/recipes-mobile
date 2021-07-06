@@ -1,4 +1,4 @@
-export interface User {
+export interface UserInfo {
   additionalUserInfo: AdditionalUserInfo;
   user: User;
 }
