@@ -18,7 +18,7 @@ type Props = {
 
 const Stack = createStackNavigator();
 
-const App: FC<Props> = ({navigation}) => {
+const App: FC<Props> = () => {
   const {currentUser} = useContext(AuthContext);
 
   const HomeStack = () => (

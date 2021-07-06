@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import {render, fireEvent} from '@testing-library/react-native';
+import {fireEvent} from '@testing-library/react-native';
 
 import LoginScreen from '../src/containers/LoginScreen';
 import {renderWithAllWrapper} from 'lib/testing/renderHelper';

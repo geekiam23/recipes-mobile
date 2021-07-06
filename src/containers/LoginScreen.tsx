@@ -26,7 +26,6 @@ type Props = {
 const Login: FC<Props> = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // eslint-disable-next-line prettier/prettier
   const {signIn} = useContext(AuthContext);
 
   const onLoginPress = () => {
