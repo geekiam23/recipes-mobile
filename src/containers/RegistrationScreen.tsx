@@ -23,6 +23,8 @@ type Props = {
   navigation: RegistrationScreenNavigationProp;
 };
 
+//TODO: Refactor to use styled components
+
 const Registration: FC<Props> = ({navigation}) => {
   const {registerAccount} = useContext(AuthContext);
   const [displayName, setDisplayName] = useState('');
