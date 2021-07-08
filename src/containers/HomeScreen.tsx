@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, StyleSheet} from 'react-native';
+import {FlatList} from 'react-native';
 import axios from 'axios';
 import _ from 'lodash';
 import Config from 'react-native-config';
+import styled from 'styled-components';
 
 import VerticalImageIndex from '../components/VerticalImageIndex';
 
+const StyledFlatlist = styled(FlatList)`
+  background-color: #093150;
+`;
 const HomeScreen = () => {
   const [recipes, setRecipes] = useState([]);
 
@@ -38,14 +42,13 @@ const HomeScreen = () => {
   };
 
   const renderRecipes = ({item}) => {
-    return <VerticalImageIndex photo={item} />;
+    return <VerticalImageIndex recipe={item} />;
   };
 
   return (
     <>
-      <FlatList
+      <StyledFlatlist
         data={recipes}
-        style={styles.flatList}
         onEndReached={getRecipes}
         onEndReachedThreshold={0.5}
         renderItem={renderRecipes}
@@ -54,12 +57,5 @@ const HomeScreen = () => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  flatList: {
-    display: 'flex',
-    backgroundColor: '#092235',
-  },
-});
 
 export default HomeScreen;
