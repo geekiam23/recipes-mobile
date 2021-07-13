@@ -5614,7 +5614,7 @@ export const testData2 = () => {
         ],
         id: 640166,
         title:
-          'Cornmeal-Crusted Catfish with Cajun Seasoning and Spicy Tartar Sauce',
+          'Cornmeal-Crusted Catfish',
         readyInMinutes: 45,
         servings: 4,
         sourceUrl:
