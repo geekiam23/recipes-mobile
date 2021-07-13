@@ -16,8 +16,8 @@ const StyledScrollView = styled.ScrollView.attrs(() => ({
 const RecipeImage = styled(Image)`
   width: 95%;
   align-items: center;
-  height: 196;
-  border-radius: 4;
+  height: 196px;
+  border-radius: 4px;
 `;
 
 const CookingInfoContainer = styled(View)`
@@ -50,12 +50,12 @@ const RecipeScreen = ({route}) => {
 
       <CookingInfoContainer>
         <Text>Cooking Info</Text>
-        <CookingInfoTextContainer>
+        <CookingInfoTextContainer testID="cooking-info-time-container">
           <Text>Ready In </Text>
           <Text>{recipe.readyInMinutes} </Text>
           <Text>Minutes</Text>
         </CookingInfoTextContainer>
-        <CookingInfoTextContainer>
+        <CookingInfoTextContainer testID="cooking-info-servings-container">
           <Text>Servings: </Text>
           <Text>{recipe.servings}</Text>
         </CookingInfoTextContainer>

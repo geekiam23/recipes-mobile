@@ -14,7 +14,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     getRecipes();
-  });
+  }, []);
 
   const getRecipes = async () => {
     const response = await loadRandomRecipes();
