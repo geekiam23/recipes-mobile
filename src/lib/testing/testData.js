@@ -4058,7 +4058,6 @@ export const testData2 = () => {
               'boneless',
               'skinless',
               'cut into bite sized pieces',
-              ,
             ],
             measures: {
               us: {
@@ -5542,7 +5541,6 @@ export const testData2 = () => {
               'green',
               'finely chopped',
               '( and parts)',
-              ,
             ],
             measures: {
               us: {
@@ -5613,8 +5611,7 @@ export const testData2 = () => {
           },
         ],
         id: 640166,
-        title:
-          'Cornmeal-Crusted Catfish',
+        title: 'Cornmeal-Crusted Catfish',
         readyInMinutes: 45,
         servings: 4,
         sourceUrl:

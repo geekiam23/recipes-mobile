@@ -5,7 +5,12 @@ import {
   StackNavigationProp,
 } from '@react-navigation/stack';
 
-import {HomeScreen, LoginScreen, RegistrationScreen} from './src/containers';
+import {
+  HomeScreen,
+  LoginScreen,
+  RecipeScreen,
+  RegistrationScreen,
+} from './src/containers';
 import HeaderIcons from './src/components/HeaderIcons';
 import {AuthContext} from './src/lib/context/AuthContext/AuthContextProvider';
 import {RootStackParamList} from './src/types';
@@ -39,6 +44,11 @@ const App: FC<Props> = () => {
           },
           headerRight: () => <HeaderIcons />,
         }}
+      />
+      <Stack.Screen
+        name="Recipe"
+        component={RecipeScreen}
+        options={({route}) => ({title: route?.params?.recipe.title})}
       />
     </>
   );

@@ -12,7 +12,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
 import {RootStackParamList} from '../types';
 import image from '../assets/login_bg.jpg';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 type LoginScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -26,6 +26,7 @@ type Props = {
 const BackgroundImage = styled(ImageBackground)`
   opacity: 0.3;
   flex: 1;
+  width: 100%;
 `;
 
 const BodyContainer = styled(View)`
@@ -54,7 +55,7 @@ const FooterLink = styled(Text)`
 `;
 
 const FooterText = styled(Text)`
-  height: 30;
+  height: 30px;
   color: black;
 `;
 
@@ -77,7 +78,7 @@ const InputContainer = styled(View)`
 `;
 
 const Input = styled(TextInput)`
-  height: 50;
+  height: 50px;
   flex: 1;
   font-weight: bold;
   font-size: 18px;

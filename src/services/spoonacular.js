@@ -1,5 +1,4 @@
 import axios from 'axios';
-import _ from 'lodash';
 import Config from 'react-native-config';
 
 export const loadRandomRecipes = async () => {

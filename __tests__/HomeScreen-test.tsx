@@ -1,6 +1,5 @@
 import 'react-native';
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {fireEvent, waitFor} from '@testing-library/react-native';
 import {loadRandomRecipes as mockLoadRandomRecipes} from '../src/services/spoonacular';
 

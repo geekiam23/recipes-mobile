@@ -11,22 +11,22 @@ import ImageToolbar from './ImageToolbar';
 import {Recipe} from '../types/recipe';
 
 type Props = {
-  photo: Recipe;
+  recipe: Recipe;
   navigation?: any;
 };
 
-const VerticalImageIndex: FC<Props> = ({photo, navigation}) => {
+const VerticalImageIndex: FC<Props> = ({recipe, navigation}) => {
   const onImagePress = () => {
-    navigation.push('Image', {photo});
+    navigation.navigate('Recipe', {recipe});
   };
 
   return (
-    <View style={styles.container} key={photo.id} testID="recipes">
+    <View style={styles.container} key={recipe?.id} testID="recipes">
       <StatusBar barStyle="light-content" />
-      <TouchableOpacity style={styles.photoContainer} onPress={onImagePress}>
-        <Image style={styles.image} source={{uri: photo?.image}} />
+      <TouchableOpacity style={styles.recipeContainer} onPress={onImagePress}>
+        <Image style={styles.image} source={{uri: recipe?.image}} />
 
-        <ImageToolbar photo={photo} fullScreen={false} />
+        <ImageToolbar recipe={recipe} fullScreen={false} />
       </TouchableOpacity>
     </View>
   );
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     paddingTop: 10,
   },
-  photoContainer: {
+  recipeContainer: {
     width: '100%',
     alignItems: 'center',
   },

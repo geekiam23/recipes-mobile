@@ -1,19 +1,15 @@
 import React, {FC} from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 import Heart from '../assets/Heart';
 import {Recipe} from '../types/recipe';
 
 type Props = {
-  photo: Recipe;
+  recipe: Recipe;
   fullScreen?: boolean;
 };
 
-const ImageToolbar: FC<Props> = ({navigation, photo, fullScreen}) => {
-  const onUserPress = () => {
-    navigation.navigate('Bio', {photo});
-  };
-
+const ImageToolbar: FC<Props> = ({recipe, fullScreen}) => {
   return (
     <View
       style={
@@ -24,9 +20,9 @@ const ImageToolbar: FC<Props> = ({navigation, photo, fullScreen}) => {
             }
           : styles.bottomToolbar
       }>
-      <TouchableOpacity style={styles.usernameContainer} onPress={onUserPress}>
-        <Text style={styles.username}>{photo?.title}</Text>
-      </TouchableOpacity>
+      <View style={styles.usernameContainer}>
+        <Text style={styles.username}>{recipe?.title}</Text>
+      </View>
       <View style={styles.heartIcon}>
         <Heart />
       </View>
