@@ -1,1 +1,0 @@
-{"version":3,"sources":["from.js"],"names":["parent","require","module","exports"],"mappings":"AAAA,IAAIA,MAAM,GAAGC,OAAO,uBAApB;;AAEAC,MAAM,CAACC,OAAP,GAAiBH,MAAjB","sourcesContent":["var parent = require('../../es/array/from');\n\nmodule.exports = parent;\n"]}

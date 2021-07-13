@@ -1,1 +1,0 @@
-{"version":3,"sources":["assign.js"],"names":["require","path","module","exports","Object","assign"],"mappings":"AAAAA,OAAO,kCAAP;;AACA,IAAIC,IAAI,GAAGD,OAAO,wBAAlB;;AAEAE,MAAM,CAACC,OAAP,GAAiBF,IAAI,CAACG,MAAL,CAAYC,MAA7B","sourcesContent":["require('../../modules/es.object.assign');\nvar path = require('../../internals/path');\n\nmodule.exports = path.Object.assign;\n"]}

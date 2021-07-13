@@ -1,1 +1,0 @@
-{"version":3,"sources":["get-iterator-method.js"],"names":["module","exports","require"],"mappings":"AAAAA,MAAM,CAACC,OAAP,GAAiBC,OAAO,CAAC,2CAAD,CAAxB","sourcesContent":["module.exports = require(\"core-js-pure/features/get-iterator-method\");"]}

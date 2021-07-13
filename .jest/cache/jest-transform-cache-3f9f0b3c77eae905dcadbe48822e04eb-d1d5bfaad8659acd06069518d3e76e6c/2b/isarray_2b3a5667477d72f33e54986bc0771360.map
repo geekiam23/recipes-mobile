@@ -1,1 +1,0 @@
-{"version":3,"sources":["is-array.js"],"names":["require","path","module","exports","Array","isArray"],"mappings":"AAAAA,OAAO,mCAAP;;AACA,IAAIC,IAAI,GAAGD,OAAO,wBAAlB;;AAEAE,MAAM,CAACC,OAAP,GAAiBF,IAAI,CAACG,KAAL,CAAWC,OAA5B","sourcesContent":["require('../../modules/es.array.is-array');\nvar path = require('../../internals/path');\n\nmodule.exports = path.Array.isArray;\n"]}

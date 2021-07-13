@@ -1,1 +1,0 @@
-{"version":3,"sources":["global_emitter.js"],"names":["require","EventEmitter","module","exports"],"mappings":"AAAA;;AAEA,eAAyBA,OAAO,CAAC,QAAD,CAAhC;AAAA,IAAQC,YAAR,YAAQA,YAAR;;AAEAC,MAAM,CAACC,OAAP,GAAiB,IAAIF,YAAJ,EAAjB","sourcesContent":["'use strict'\n\nconst { EventEmitter } = require('events')\n\nmodule.exports = new EventEmitter()\n"]}

@@ -1,9 +1,0 @@
-490ffe7218b528b7375bf29eef1be5fa
-module.exports = function (it, Constructor, name) {
-  if (!(it instanceof Constructor)) {
-    throw TypeError('Incorrect ' + (name ? name + ' ' : '') + 'invocation');
-  }
-
-  return it;
-};
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFuLWluc3RhbmNlLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJpdCIsIkNvbnN0cnVjdG9yIiwibmFtZSIsIlR5cGVFcnJvciJdLCJtYXBwaW5ncyI6IkFBQUFBLE1BQU0sQ0FBQ0MsT0FBUCxHQUFpQixVQUFVQyxFQUFWLEVBQWNDLFdBQWQsRUFBMkJDLElBQTNCLEVBQWlDO0FBQ2hELE1BQUksRUFBRUYsRUFBRSxZQUFZQyxXQUFoQixDQUFKLEVBQWtDO0FBQ2hDLFVBQU1FLFNBQVMsQ0FBQyxnQkFBZ0JELElBQUksR0FBR0EsSUFBSSxHQUFHLEdBQVYsR0FBZ0IsRUFBcEMsSUFBMEMsWUFBM0MsQ0FBZjtBQUNEOztBQUFDLFNBQU9GLEVBQVA7QUFDSCxDQUpEIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbiAoaXQsIENvbnN0cnVjdG9yLCBuYW1lKSB7XG4gIGlmICghKGl0IGluc3RhbmNlb2YgQ29uc3RydWN0b3IpKSB7XG4gICAgdGhyb3cgVHlwZUVycm9yKCdJbmNvcnJlY3QgJyArIChuYW1lID8gbmFtZSArICcgJyA6ICcnKSArICdpbnZvY2F0aW9uJyk7XG4gIH0gcmV0dXJuIGl0O1xufTtcbiJdfQ==

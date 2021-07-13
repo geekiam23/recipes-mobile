@@ -1,1 +1,0 @@
-{"version":3,"sources":["is-pure.js"],"names":["module","exports"],"mappings":"AAAAA,MAAM,CAACC,OAAP,GAAiB,IAAjB","sourcesContent":["module.exports = true;\n"]}

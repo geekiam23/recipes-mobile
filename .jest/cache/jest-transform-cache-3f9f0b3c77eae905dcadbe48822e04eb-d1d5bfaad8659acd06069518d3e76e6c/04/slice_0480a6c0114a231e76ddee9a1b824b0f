@@ -1,7 +1,0 @@
-008328a557c7269cc24225c92ec04a7b
-require("../../../modules/es.array.slice");
-
-var entryVirtual = require("../../../internals/entry-virtual");
-
-module.exports = entryVirtual('Array').slice;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNsaWNlLmpzIl0sIm5hbWVzIjpbInJlcXVpcmUiLCJlbnRyeVZpcnR1YWwiLCJtb2R1bGUiLCJleHBvcnRzIiwic2xpY2UiXSwibWFwcGluZ3MiOiJBQUFBQSxPQUFPLG1DQUFQOztBQUNBLElBQUlDLFlBQVksR0FBR0QsT0FBTyxvQ0FBMUI7O0FBRUFFLE1BQU0sQ0FBQ0MsT0FBUCxHQUFpQkYsWUFBWSxDQUFDLE9BQUQsQ0FBWixDQUFzQkcsS0FBdkMiLCJzb3VyY2VzQ29udGVudCI6WyJyZXF1aXJlKCcuLi8uLi8uLi9tb2R1bGVzL2VzLmFycmF5LnNsaWNlJyk7XG52YXIgZW50cnlWaXJ0dWFsID0gcmVxdWlyZSgnLi4vLi4vLi4vaW50ZXJuYWxzL2VudHJ5LXZpcnR1YWwnKTtcblxubW9kdWxlLmV4cG9ydHMgPSBlbnRyeVZpcnR1YWwoJ0FycmF5Jykuc2xpY2U7XG4iXX0=

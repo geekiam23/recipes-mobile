@@ -1,7 +1,0 @@
-fd6af57f166d7195fc647752655c3dd5
-require("../../modules/es.object.assign");
-
-var path = require("../../internals/path");
-
-module.exports = path.Object.assign;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFzc2lnbi5qcyJdLCJuYW1lcyI6WyJyZXF1aXJlIiwicGF0aCIsIm1vZHVsZSIsImV4cG9ydHMiLCJPYmplY3QiLCJhc3NpZ24iXSwibWFwcGluZ3MiOiJBQUFBQSxPQUFPLGtDQUFQOztBQUNBLElBQUlDLElBQUksR0FBR0QsT0FBTyx3QkFBbEI7O0FBRUFFLE1BQU0sQ0FBQ0MsT0FBUCxHQUFpQkYsSUFBSSxDQUFDRyxNQUFMLENBQVlDLE1BQTdCIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi4vLi4vbW9kdWxlcy9lcy5vYmplY3QuYXNzaWduJyk7XG52YXIgcGF0aCA9IHJlcXVpcmUoJy4uLy4uL2ludGVybmFscy9wYXRoJyk7XG5cbm1vZHVsZS5leHBvcnRzID0gcGF0aC5PYmplY3QuYXNzaWduO1xuIl19

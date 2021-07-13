@@ -1,5 +1,0 @@
-336ebf65ae981b0cba93c5f2126309fe
-var parent = require("../../es/json/stringify");
-
-module.exports = parent;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0cmluZ2lmeS5qcyJdLCJuYW1lcyI6WyJwYXJlbnQiLCJyZXF1aXJlIiwibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsTUFBTSxHQUFHQyxPQUFPLDJCQUFwQjs7QUFFQUMsTUFBTSxDQUFDQyxPQUFQLEdBQWlCSCxNQUFqQiIsInNvdXJjZXNDb250ZW50IjpbInZhciBwYXJlbnQgPSByZXF1aXJlKCcuLi8uLi9lcy9qc29uL3N0cmluZ2lmeScpO1xuXG5tb2R1bGUuZXhwb3J0cyA9IHBhcmVudDtcbiJdfQ==

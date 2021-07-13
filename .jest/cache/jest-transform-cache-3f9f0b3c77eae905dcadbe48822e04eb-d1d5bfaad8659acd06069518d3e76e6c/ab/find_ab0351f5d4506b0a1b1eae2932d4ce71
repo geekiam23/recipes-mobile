@@ -1,7 +1,0 @@
-722ebbff19433e5c0772fcd8504214af
-require("../../../modules/es.array.find");
-
-var entryVirtual = require("../../../internals/entry-virtual");
-
-module.exports = entryVirtual('Array').find;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbmQuanMiXSwibmFtZXMiOlsicmVxdWlyZSIsImVudHJ5VmlydHVhbCIsIm1vZHVsZSIsImV4cG9ydHMiLCJmaW5kIl0sIm1hcHBpbmdzIjoiQUFBQUEsT0FBTyxrQ0FBUDs7QUFDQSxJQUFJQyxZQUFZLEdBQUdELE9BQU8sb0NBQTFCOztBQUVBRSxNQUFNLENBQUNDLE9BQVAsR0FBaUJGLFlBQVksQ0FBQyxPQUFELENBQVosQ0FBc0JHLElBQXZDIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi4vLi4vLi4vbW9kdWxlcy9lcy5hcnJheS5maW5kJyk7XG52YXIgZW50cnlWaXJ0dWFsID0gcmVxdWlyZSgnLi4vLi4vLi4vaW50ZXJuYWxzL2VudHJ5LXZpcnR1YWwnKTtcblxubW9kdWxlLmV4cG9ydHMgPSBlbnRyeVZpcnR1YWwoJ0FycmF5JykuZmluZDtcbiJdfQ==

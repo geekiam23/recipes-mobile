@@ -1,1 +1,0 @@
-{"version":3,"sources":["well-known-symbol-wrapped.js"],"names":["wellKnownSymbol","require","exports","f"],"mappings":"AAAA,IAAIA,eAAe,GAAGC,OAAO,kCAA7B;;AAEAC,OAAO,CAACC,CAAR,GAAYH,eAAZ","sourcesContent":["var wellKnownSymbol = require('../internals/well-known-symbol');\n\nexports.f = wellKnownSymbol;\n"]}

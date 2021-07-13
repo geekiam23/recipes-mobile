@@ -1,1 +1,0 @@
-{"version":3,"sources":["engine-user-agent.js"],"names":["getBuiltIn","require","module","exports"],"mappings":"AAAA,IAAIA,UAAU,GAAGC,OAAO,6BAAxB;;AAEAC,MAAM,CAACC,OAAP,GAAiBH,UAAU,CAAC,WAAD,EAAc,WAAd,CAAV,IAAwC,EAAzD","sourcesContent":["var getBuiltIn = require('../internals/get-built-in');\n\nmodule.exports = getBuiltIn('navigator', 'userAgent') || '';\n"]}
