@@ -6,16 +6,17 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-import ImageToolbar from './ImageToolbar';
-import {Recipe} from '../types/recipe';
+import ImageToolbar from 'components/ImageToolbar';
+import {Recipe} from 'types/recipe';
 
 type Props = {
   recipe: Recipe;
-  navigation?: any;
 };
 
-const VerticalImageIndex: FC<Props> = ({recipe, navigation}) => {
+const VerticalImageIndex: FC<Props> = ({recipe}) => {
+  const navigation = useNavigation();
   const onImagePress = () => {
     navigation.navigate('Recipe', {recipe});
   };

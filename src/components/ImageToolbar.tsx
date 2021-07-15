@@ -12,6 +12,23 @@ type Props = {
 };
 
 const ImageToolbar: FC<Props> = ({recipe, fullScreen}) => {
+  const {currentUser} = useContext(AuthContext);
+
+  const favoritedRecipe = currentUser?.favRecipes.includes(recipe.id);
+
+  const handleFavorites = () => {
+    // TODO: Write test for this.
+    let newFavsArray;
+    if (currentUser?.favRecipes.includes(recipe.id)) {
+      newFavsArray = currentUser?.favRecipes.filter(id => id !== recipe.id);
+    } else {
+      newFavsArray = [...currentUser?.favRecipes, recipe.id];
+    }
+    firestore().collection('users').doc(currentUser?.id).update({
+      favRecipes: newFavsArray,
+    });
+  };
+
   return (
     <View
       style={
@@ -25,9 +42,9 @@ const ImageToolbar: FC<Props> = ({recipe, fullScreen}) => {
       <View style={styles.usernameContainer}>
         <Text style={styles.username}>{recipe?.title}</Text>
       </View>
-      <View style={styles.heartIcon}>
-        <Heart />
-      </View>
+      <TouchableOpacity style={styles.heartIcon} onPress={handleFavorites}>
+        <Heart color={favoritedRecipe && 'red'} />
+      </TouchableOpacity>
     </View>
   );
 };
