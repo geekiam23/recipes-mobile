@@ -8,12 +8,20 @@ import Profile from 'assets/Profile';
 import Dice from 'assets/Dice';
 
 const HeaderIcons = () => {
+  const navigation = useNavigation();
   const {signOut} = useContext(AuthContext);
+  const route = useRoute();
+  const isHome = route.name === 'Home';
+
+  const onHeartPress = () => {
+    const routeName = isHome ? 'RandomRecipes' : 'Home';
+    navigation.navigate(routeName);
+  };
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.heartContainer} onPress={signOut}>
-        <Heart />
+      <TouchableOpacity style={styles.heartContainer} onPress={onHeartPress}>
+        {isHome ? <Dice /> : <Star />}
       </TouchableOpacity>
       <TouchableOpacity onPress={signOut}>
         <Profile />

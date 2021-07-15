@@ -9,7 +9,7 @@ interface IconProps {
 
 const Profile: FC<IconProps> = ({color = '#FFF', size = 25}) => {
   return (
-    <View>
+    <View testID="profile-icon">
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={size}
