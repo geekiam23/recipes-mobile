@@ -8,66 +8,59 @@ import {loadRecipes as mockLoadRecipes} from 'services/spoonacular';
 import {waitFor} from '@testing-library/react-native';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
+jest.mock('../src/services/firebase.js');
 jest.mock('../src/services/spoonacular.js');
 
-describe('Home Screen', () => {
-  it('displays the correct amount of recipes and correct info', async () => {
-    mockLoadRandomRecipes.mockResolvedValueOnce(testData().recipes);
-    const {getByText, getAllByTestId} = renderWithAllWrapper(<HomeScreen />);
+const mockedNavigate = jest.fn();
+jest.mock('@react-navigation/native', () => ({
+  useNavigation: () => ({navigate: mockedNavigate}),
+}));
+
+describe('Home', () => {
+  it("renders user's favorite recipe", async () => {
+    mockLoadRecipes.mockResolvedValueOnce([testData().recipes[0]]);
+
+    const {getByText} = renderWithAuthWrapper(<HomeScreen />, {
+      currentUser: {
+        favRecipes: [634237],
+      },
+    });
 
     await waitFor(() => {
-      expect(getAllByTestId('recipes')).toHaveLength(5);
-      expect(getAllByTestId('heart-icon')).toHaveLength(5);
       expect(getByText('Bananas Foster Ice Cream')).toBeTruthy();
-      expect(getByText('5-Minute Rocky Road Fudge')).toBeTruthy();
-      expect(getByText('Red Kidney Bean Jambalaya')).toBeTruthy();
-      expect(getByText("Jean's Seafood Gumbo")).toBeTruthy();
-      expect(getByText('How to Make the Best Chicken Jambalaya')).toBeTruthy();
+      expect(mockLoadRecipes).toBeCalledWith('634237');
     });
   });
 
-  it('displays the correct amount of recipes when calling onEndReached', async () => {
-    mockLoadRandomRecipes
-      .mockResolvedValueOnce(testData().recipes)
-      .mockResolvedValueOnce(testData2().recipes);
+  it("renders user's favorite recipes", async () => {
+    mockLoadRecipes.mockResolvedValueOnce(testData().recipes);
 
-    const {getByText, getByTestId} = renderWithAllWrapper(<HomeScreen />);
-
-    const eventData = {
-      nativeEvent: {
-        contentOffset: {
-          y: 100,
-        },
-        contentSize: {
-          height: 385,
-          width: 196,
-        },
-        layoutMeasurement: {
-          height: 1200,
-          width: 300,
-        },
+    const {getByText} = renderWithAuthWrapper(<HomeScreen />, {
+      currentUser: {
+        favRecipes: [634237, 2222, 22, 78978],
       },
-    };
-
-    await waitFor(() => {
-      expect(getByText('Bananas Foster Ice Cream')).toBeTruthy();
-      expect(getByText('5-Minute Rocky Road Fudge')).toBeTruthy();
-      expect(getByText('Red Kidney Bean Jambalaya')).toBeTruthy();
-      expect(getByText("Jean's Seafood Gumbo")).toBeTruthy();
-      expect(getByText('How to Make the Best Chicken Jambalaya')).toBeTruthy();
-      expect(mockLoadRandomRecipes).toBeCalledTimes(1);
     });
 
     await waitFor(() => {
-      fireEvent.scroll(getByTestId('flat-list'), eventData);
       expect(getByText('Bananas Foster Ice Cream')).toBeTruthy();
       expect(getByText('5-Minute Rocky Road Fudge')).toBeTruthy();
       expect(getByText('Red Kidney Bean Jambalaya')).toBeTruthy();
       expect(getByText("Jean's Seafood Gumbo")).toBeTruthy();
       expect(getByText('How to Make the Best Chicken Jambalaya')).toBeTruthy();
-      expect(getByText('Cornmeal-Crusted Catfish')).toBeTruthy();
-      expect(getByText('Jambalaya Stew')).toBeTruthy();
-      expect(mockLoadRandomRecipes).toBeCalledTimes(2);
+      expect(mockLoadRecipes).toBeCalledWith('634237,2222,22,78978');
+    });
+  });
+
+  it('does not render if currentUser is missing', async () => {
+    mockLoadRecipes.mockResolvedValueOnce(testData().recipes);
+
+    const {queryByText} = renderWithAuthWrapper(<HomeScreen />, {
+      currentUser: null,
+    });
+
+    await waitFor(() => {
+      expect(queryByText('Bananas Foster Ice Cream')).toBeFalsy();
+      expect(mockLoadRecipes).not.toBeCalledWith('634237, 2222, 22, 78978');
     });
   });
 });

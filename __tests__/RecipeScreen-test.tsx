@@ -14,9 +14,7 @@ describe('Recipe Screen', () => {
         recipe: testData().recipes[0],
       },
     };
-    const {getByTestId, getByText} = renderWithAllWrapper(
-      <RecipeScreen route={route} />,
-    );
+    const {getByTestId, getByText} = render(<RecipeScreen route={route} />);
 
     waitFor(() => {
       // Testing cooking info

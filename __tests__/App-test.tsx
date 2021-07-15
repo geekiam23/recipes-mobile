@@ -8,19 +8,31 @@ import {loadFirestoreUser as mockloadFirestoreUser} from 'services/firebase';
 import {loadRecipes as mockLoadRecipes} from 'services/spoonacular';
 import {fireEvent, waitFor} from '@testing-library/react-native';
 
-const navigate = jest.fn();
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
+jest.mock('../src/services/firebase.js');
+jest.mock('../src/services/spoonacular.js');
 
 describe('App', () => {
-  it('renders HomeScreen when currentUser is available', () => {
-    const {getByText} = renderWithAllWrapper(<App navigation={{navigate}} />, {
-      currentUser: true,
+  it('renders HomeScreen when currentUser is available', async () => {
+    mockloadFirestoreUser.mockResolvedValueOnce([634237]);
+    mockLoadRecipes.mockResolvedValueOnce(testData().recipes[0]);
+    const {getByText, getByTestId} = renderWithAllWrapper(<App />, {
+      currentUser: {
+        favRecipes: [634237],
+      },
     });
 
-    expect(getByText('Recipes')).toBeTruthy();
+    await waitFor(() => {
+      expect(getByText('My Recipes')).toBeTruthy();
+      expect(getByTestId('dice-icon')).toBeTruthy();
+      fireEvent.press(getByTestId('dice-icon'));
+      expect(getByTestId('star-icon')).toBeTruthy();
+    });
   });
+
   it('renders LoginScreen when currentUser is not available', () => {
-    const {getByText} = renderWithAllWrapper(<App navigation={{navigate}} />, {
-      currentUser: false,
+    const {getByText} = renderWithAllWrapper(<App />, {
+      currentUser: null,
     });
 
     expect(getByText('Welcome back')).toBeTruthy();

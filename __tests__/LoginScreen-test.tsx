@@ -2,7 +2,7 @@ import 'react-native';
 import React from 'react';
 import {fireEvent} from '@testing-library/react-native';
 
-import LoginScreen from '../src/containers/LoginScreen';
+import LoginScreen from 'containers/LoginScreen';
 import {renderWithAllWrapper} from 'lib/testing/renderHelper';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
