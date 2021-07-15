@@ -10,3 +10,13 @@ export const renderWithAllWrapper = (children, value) => {
     </AuthContext.Provider>,
   );
 };
+
+export const renderWithAuthWrapper = (children, value) => {
+  return render(
+    <AuthContext.Provider value={value}>{children}</AuthContext.Provider>,
+  );
+};
+
+export const renderWithNavWrapper = children => {
+  return render(<NavigationContainer>{children}</NavigationContainer>);
+};
