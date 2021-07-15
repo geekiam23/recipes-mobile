@@ -14,7 +14,7 @@ import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
 
 const Stack = createStackNavigator();
 
-const App: FC<Props> = () => {
+const App: FC = () => {
   const {currentUser} = useContext(AuthContext);
 
   const HomeStack = () => (
@@ -23,14 +23,31 @@ const App: FC<Props> = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Recipes',
+          title: 'My Recipes',
           headerStyle: {
             backgroundColor: '#092235',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
             fontWeight: 'bold',
-            fontSize: 30,
+            fontSize: 20,
+            paddingBottom: 5,
+          },
+          headerRight: () => <HeaderIcons />,
+        }}
+      />
+      <Stack.Screen
+        name="RandomRecipes"
+        component={RandomRecipesScreen}
+        options={{
+          title: 'Random Recipes',
+          headerStyle: {
+            backgroundColor: '#092235',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 20,
             paddingBottom: 5,
           },
           headerRight: () => <HeaderIcons />,
