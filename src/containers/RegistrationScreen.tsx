@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
-import {RootStackParamList} from '../types';
-import image from '../assets/login_bg.jpg';
-import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
+import {RootStackParamList} from 'types';
+import image from 'assets/login_bg.jpg';
+import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
 
 type RegistrationScreenNavigationProp = StackNavigationProp<
   RootStackParamList,

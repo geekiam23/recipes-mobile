@@ -8,11 +8,11 @@ import {
   Text,
 } from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
-
-import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
-import {RootStackParamList} from '../types';
-import image from '../assets/login_bg.jpg';
 import styled from 'styled-components/native';
+
+import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
+import {RootStackParamList} from 'types';
+import image from 'assets/login_bg.jpg';
 
 type LoginScreenNavigationProp = StackNavigationProp<
   RootStackParamList,

@@ -1,11 +1,11 @@
 import 'react-native';
 import React from 'react';
-import {fireEvent, waitFor} from '@testing-library/react-native';
-import {loadRandomRecipes as mockLoadRandomRecipes} from '../src/services/spoonacular';
 
-import HomeScreen from '../src/containers/HomeScreen';
-import {testData, testData2} from '../src/lib/testing/testData';
-import {renderWithAllWrapper} from 'lib/testing/renderHelper';
+import {HomeScreen} from 'containers';
+import {renderWithAuthWrapper} from 'lib/testing/renderHelper';
+import {testData} from 'lib/testing/testData';
+import {loadRecipes as mockLoadRecipes} from 'services/spoonacular';
+import {waitFor} from '@testing-library/react-native';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 jest.mock('../src/services/spoonacular.js');

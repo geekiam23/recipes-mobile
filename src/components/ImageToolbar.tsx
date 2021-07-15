@@ -1,8 +1,10 @@
-import React, {FC} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import React, {FC, useContext} from 'react';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import firestore from '@react-native-firebase/firestore';
 
-import Heart from '../assets/Heart';
-import {Recipe} from '../types/recipe';
+import Heart from 'assets/Heart';
+import {Recipe} from 'types/recipe';
+import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
 
 type Props = {
   recipe: Recipe;

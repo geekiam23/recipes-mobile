@@ -2,8 +2,8 @@ import 'react-native';
 import React from 'react';
 import {fireEvent} from '@testing-library/react-native';
 
-import RegistrationScreen from '../src/containers/RegistrationScreen';
-import {renderWithAllWrapper} from '../src/lib/testing/renderHelper';
+import RegistrationScreen from 'containers/RegistrationScreen';
+import {renderWithAllWrapper} from 'lib/testing/renderHelper';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 jest.mock('../src/lib/context/AuthContext/AuthContextProvider.js');

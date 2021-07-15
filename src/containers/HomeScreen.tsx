@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {FlatList} from 'react-native';
-import _ from 'lodash';
+import React, {useContext, useEffect, useState} from 'react';
+import {FlatList, StatusBar} from 'react-native';
 import styled from 'styled-components/native';
 
+import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
 import VerticalImageIndex from 'components/VerticalImageIndex';
-import {loadRandomRecipes} from 'services/spoonacular';
+import {loadRecipes} from 'services/spoonacular';
 
 const StyledFlatlist = styled(FlatList)`
   background-color: #093150;

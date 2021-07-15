@@ -1,7 +1,12 @@
 import 'react-native';
 import React from 'react';
+
 import App from '../App';
 import {renderWithAllWrapper} from 'lib/testing/renderHelper';
+import {testData} from 'lib/testing/testData';
+import {loadFirestoreUser as mockloadFirestoreUser} from 'services/firebase';
+import {loadRecipes as mockLoadRecipes} from 'services/spoonacular';
+import {fireEvent, waitFor} from '@testing-library/react-native';
 
 const navigate = jest.fn();
 

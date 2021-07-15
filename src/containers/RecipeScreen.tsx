@@ -44,6 +44,7 @@ const Border = styled(View)`
 const RecipeScreen = ({route}) => {
   const {recipe} = route.params;
 
+  const recipeSteps = recipe?.analyzedInstructions[0]?.steps;
   return (
     <StyledScrollView>
       <RecipeImage source={{uri: recipe?.image}} />
@@ -66,11 +67,15 @@ const RecipeScreen = ({route}) => {
           <Ingredient key={ingredient.id} ingredient={ingredient} />
         ))}
 
-        <Border />
-        <Text>Cooking Steps</Text>
+        {recipeSteps?.length > 0 && (
+          <>
+            <Border />
+            <Text>Cooking Steps</Text>
+          </>
+        )}
 
-        {recipe?.analyzedInstructions[0].steps.length > 0 &&
-          recipe?.analyzedInstructions[0]?.steps.map(step => (
+        {recipeSteps?.length > 0 &&
+          recipeSteps?.map(step => (
             <Instructions key={step.number} step={step} />
           ))}
       </CookingIngedStepsContainer>

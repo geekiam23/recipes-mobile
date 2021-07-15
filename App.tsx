@@ -1,25 +1,16 @@
 import 'react-native-gesture-handler';
 import React, {FC, useContext} from 'react';
-import {
-  createStackNavigator,
-  StackNavigationProp,
-} from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 
 import {
   HomeScreen,
   LoginScreen,
   RecipeScreen,
   RegistrationScreen,
-} from './src/containers';
-import HeaderIcons from './src/components/HeaderIcons';
-import {AuthContext} from './src/lib/context/AuthContext/AuthContextProvider';
-import {RootStackParamList} from './src/types';
-
-type RootScreenNavigationProp = StackNavigationProp<RootStackParamList, 'App'>;
-
-type Props = {
-  navigation: RootScreenNavigationProp;
-};
+  RandomRecipesScreen,
+} from 'containers';
+import HeaderIcons from 'components/HeaderIcons';
+import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
 
 const Stack = createStackNavigator();
 

@@ -1,9 +1,11 @@
 import React, {useContext} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 
-import {AuthContext} from '../lib/context/AuthContext/AuthContextProvider';
-import Heart from '../assets/Heart';
-import Profile from '../assets/Profile';
+import {AuthContext} from 'lib/context/AuthContext/AuthContextProvider';
+import Star from 'assets/Star';
+import Profile from 'assets/Profile';
+import Dice from 'assets/Dice';
 
 const HeaderIcons = () => {
   const {signOut} = useContext(AuthContext);
